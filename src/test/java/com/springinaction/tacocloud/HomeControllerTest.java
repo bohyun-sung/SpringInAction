@@ -6,13 +6,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
-import com.springinaction.tacocloud.controller.HomeController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.test.web.servlet.MockMvc;
+// HomeController 가 삭제되어도 addViewControllers 에 설정해서 error가 나지않음
+// @WebMvcTest(HomeController.Class)
 
-@WebMvcTest(HomeController.class) // HomeController의 웹 페이지 테스트
+@WebMvcTest
 public class HomeControllerTest {
 
     @Autowired
